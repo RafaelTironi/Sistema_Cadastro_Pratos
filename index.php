@@ -76,7 +76,7 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuarios");
                         <td><?php echo $prato["preco"] ?></td>
                         <td><?php echo $prato["categoria"] ?></td>
                         <td>
-                            <a href="public/editar.php?nome=<?php echo urlencode($prato["nome"]); ?>">Editar</a>
+                            <a href="public/editar.php?id=<?php echo $prato["id"]; ?>">Editar</a>
                             <a href="public/excluir.php?id=<?php echo $prato["id"] ?>">Excluir</a>
                             <a href="public/listar.php?id=<?php echo $prato["id"] ?>">Listar Por Usuário</a>
                         </td>
