@@ -37,18 +37,20 @@ if ($stmt) {
         <h1>CRUD - Livraria</h1>
     </header>
     <main>
-        <h2>Editando o livro <?php echo $livro["titulo"]?>!</h2>
+        <h2>Editando o prato <?php echo $pratos["titulo"]?>!</h2>
         <form action="atualizar.php" method="POST">
-            <input type="hidden" name="id" value="<?php echo $livro["id"]?>">
+            <input type="hidden" name="id" value="<?php echo $pratos["id"]?>">
 
             <label for="titulo">Título:</label>
-            <input type="text" name="titulo" value="<?php echo $livro["titulo"]?>">
+            <input type="text" name="nome_prato" value="<?php echo $pratos["nome_prato"]?>">
             <br>
             <label for="autor">Autor:</label>
-            <input type="text" name="autor" value="<?php echo $livro["autor"]?>">
+            <input type="text" name="desc" value="<?php echo $pratos["desc"]?>">
             <br>
             <label for="ano">Ano de Publicação:</label>
-            <input type="number" name="ano" value="<?php echo $livro["ano"]?>">
+            <input type="number" name="preco" value="<?php echo $pratos["preco"]?>">
+            <br>
+            <input type="number" name="categoria" value="<?php echo $pratos["categoria"]?>">
             <br>
             <button type="submit">Atualizar</button>
         </form>
