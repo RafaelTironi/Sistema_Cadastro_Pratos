@@ -16,7 +16,7 @@ if($stmt){
 
 
 
-mysqli_stmt_bind_param($stmt, "ssdsdi", $nome, $descricao, $preco, $categoria, $usuario_id );
+mysqli_stmt_bind_param($stmt, "ssdsi", $nome, $descricao, $preco, $categoria, $usuario_id );
 
 mysqli_stmt_execute($stmt);
 
