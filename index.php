@@ -21,7 +21,7 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
     </header>
     <main>
         <h2>Adicione um novo prato!</h2>
-        <form action="public/cadastrar.php" method="POST">
+        <form action="public/cadastrar_prato.php" method="POST">
             <label for="Nome_Prato">Nome:</label>
             <input type="text" name="nome_prato">
             <br>
@@ -57,6 +57,7 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
                         <td>
                             <a href="public/editar.php?id=<?php echo $pratos["id"] ?>">Editar</a>
                             <a href="public/excluir.php?id=<?php echo $pratos["id"] ?>">Excluir</a>
+                            <a href="public/listar.php?id=<?php echo $pratos["id"] ?>">Listar Por Usuário</a>
                         </td>
                     </tr>
                 <?php } ?>
