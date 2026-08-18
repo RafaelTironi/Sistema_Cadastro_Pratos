@@ -3,16 +3,17 @@
 
 include "../infra/conexao.php";
 
-$nome = $_POST["nome"];
-$descricao = $_POST["descricao"];
+$nome = $_POST["nome_prato"];
+$descricao = $_POST["desc"];
 $preco = $_POST["preco"];
-$categoria = $_POST["categoria"]
+$categoria = $_POST["categoria"];
 //query
 $sql = "INSERT INTO pratos (nome, descricao ,preco, categoria) VALUES (?,?,?,?)";
 
-if(stmt){
+$stmt=mysqli_prepare($conexao, $sql);
+if($stmt){
 
-$stmt=mysqli_prepare($conexao, $sql)
+
 
 mysqli_stmt_bind_param($stmt, "ssds", $nome, $descricao, $preco, $categoria );
 

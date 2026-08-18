@@ -47,17 +47,17 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
                     <th>Categoria</th>
                     <th>Ações</th>
                 </tr>
-                <?php while ($pratos = mysqli_fetch_assoc($pratos)) { ?>
+                <?php while ($prato = mysqli_fetch_assoc($pratos)) { ?>
                     <tr>
-                        <td><?php echo $pratos["id"] ?></td>
-                        <td><?php echo $pratos["nome"] ?></td>
-                        <td><?php echo $pratos["descricao"] ?></td>
-                        <td><?php echo $pratos["preco"] ?></td>
-                        <td><?php echo $pratos["categoria"] ?></td>
+                        <td><?php echo $prato["id"] ?></td>
+                        <td><?php echo $prato["nome"] ?></td>
+                        <td><?php echo $prato["descricao"] ?></td>
+                        <td><?php echo $prato["preco"] ?></td>
+                        <td><?php echo $prato["categoria"] ?></td>
                         <td>
-                            <a href="public/editar.php?id=<?php echo $pratos["id"] ?>">Editar</a>
-                            <a href="public/excluir.php?id=<?php echo $pratos["id"] ?>">Excluir</a>
-                            <a href="public/listar.php?id=<?php echo $pratos["id"] ?>">Listar Por Usuário</a>
+                            <a href="public/editar.php?id=<?php echo $prato["id"] ?>">Editar</a>
+                            <a href="public/excluir.php?id=<?php echo $prato["id"] ?>">Excluir</a>
+                            <a href="public/listar.php?id=<?php echo $prato["id"] ?>">Listar Por Usuário</a>
                         </td>
                     </tr>
                 <?php } ?>
