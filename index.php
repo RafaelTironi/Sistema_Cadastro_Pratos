@@ -25,7 +25,7 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuarios");
         <form action="public/cadastrar_usu.php" method="POST">
 
             <label>Nome:</label>
-            <input type="text" name="nome" required>
+            <input type="text" name="nome_usuario" required>
             <br>
 
             <label>E-mail:</label>
