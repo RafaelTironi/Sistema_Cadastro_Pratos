@@ -5,15 +5,15 @@ USE sistema_pratos_juErafa;
 Create TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(200) NOT NULL,
-    email VARCHAR(200) NOT NULL UNIQUE,
+    email VARCHAR(200) NOT NULL UNIQUE
 );
 
 CREATE TABLE pratos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(200) NOT NULL,
-    descricao TEXT,
+    descricao TEXT NOT NULL,
     preco DECIMAL(10, 2) NOT NULL,
-    categoria VARCHAR(100),
+    categoria VARCHAR(100) NOT NULL,
     usuario_id INT NOT NULL,
 
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
