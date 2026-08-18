@@ -8,7 +8,7 @@ $descricao = $_POST["descricao"];
 $preco = $_POST["preco"];
 $categoria = $_POST["categoria"]
 //query
-$sql = "INSERT INTO livros (nome, descricao ,preco, categoria) VALUES (?,?,?,?)";
+$sql = "INSERT INTO pratos (nome, descricao ,preco, categoria) VALUES (?,?,?,?)";
 
 if(stmt){
 
