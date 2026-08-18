@@ -33,8 +33,7 @@ $usuario_id = $usuario["id"];
 
 // Cadastra o prato
 $sql = "INSERT INTO pratos 
-        (nome, descricao, preco, categoria, usuario_id) 
-        VALUES (?, ?, ?, ?, ?)";
+        (nome, descricao, preco, categoria, usuario_id) VALUES (?, ?, ?, ?, ?)";
 
 $stmt = mysqli_prepare($conexao, $sql);
 
