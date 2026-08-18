@@ -2,7 +2,7 @@
 
 include "infra/conexao.php";
 $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
-
+$usuarios = mysqli_query($conexao, "SELECT * FROM usuarios");
 ?>
 
 <!DOCTYPE html>
@@ -20,20 +20,41 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
         <h1>CRUD - Sistema Pratos</h1>
     </header>
     <main>
+
+        <h2>Adicione um novo usuário!</h2>
+        <form action="public/cadastrar_usuario.php" method="POST">
+
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
+            <br>
+
+            <label>E-mail:</label>
+            <input type="email" name="email" required>
+            <br>
+
+            <button type="submit">Cadastrar Usuário</button>
+
+        </form>
+
         <h2>Adicione um novo prato!</h2>
         <form action="public/cadastrar_prato.php" method="POST">
             <label for="Nome_Prato">Nome:</label>
-            <input type="text" name="nome_prato">
+            <input type="text" name="nome_prato" required>
             <br>
             <label for="Desc">Descrição:</label>
-            <input type="text" name="desc">
+            <input type="text" name="desc" required>
             <br>
             <label for="Preco">Preço:</label>
-            <input type="number" name="preco">
+            <input type="number" name="preco" required>
             <br>
             <label for="Categoria">Categoria:</label>
-            <input type="text" name="categoria">
+            <input type="text" name="categoria" required>
             <br>
+
+            <label for="Nome_Usuario">Usuário:</label>
+            <input type="text" name="nome_usuario" required>
+            <br>
+
             <button type="submit">Cadastrar</button>
         </form>
         <div>
