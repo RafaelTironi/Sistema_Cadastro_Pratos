@@ -12,15 +12,16 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuarios");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD - Sistema Pratos</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>CRUD - Sistema Pratos</h1>
+    <header class= "cabecalio">
+        <h1 id="title">CRUD - Sistema Pratos</h1>
     </header>
-    <main>
+    <main class="conteudo">
 
+    <div class="form_usuario">
         <h2>Adicione um novo usuário!</h2>
         <form action="public/cadastrar_usu.php" method="POST">
 
@@ -35,7 +36,8 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuarios");
             <button type="submit">Cadastrar Usuário</button>
 
         </form>
-
+    </div>
+    <div class="form_prato">
         <h2>Adicione um novo prato!</h2>
         <form action="public/cadastrar_prato.php" method="POST">
             <label for="Nome_Prato">Nome:</label>
@@ -57,7 +59,8 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuarios");
 
             <button type="submit">Cadastrar</button>
         </form>
-        <div>
+    </div>
+        <div class="pratos-cadastrados">
             <h2>Pratos Cadastrados</h2>
             <table>
                 <tr>
@@ -87,8 +90,9 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuarios");
 
     </main>
     <footer>
-
+       
     </footer>
+    
 
 
 </body>

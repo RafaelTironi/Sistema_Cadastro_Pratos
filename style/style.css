@@ -1,0 +1,73 @@
+body{
+    background-color: #ffafaf;
+    font-family: Times New Roman, sans-serif;
+    color: #361212;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+.conteudo{
+    margin: 25px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    text-align: center;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.pratos-cadastrados{
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #ffeeb59a;
+    border-radius: 10px;
+}
+
+.form_usuario{
+    margin-top: 30px;
+    padding: 8px;
+    background-color: #ffeeb59a;
+    border-radius: 10px;
+
+}
+
+
+.form_prato{
+    margin-top: 30px;
+    padding: 8px;
+    background-color: #ffafafb6;
+    border-radius: 10px;
+}
+
+#title{
+    text-align: center;
+    padding: 10px;
+    background-color: #c5ffc3;
+    margin-top: 0px;
+    width: 1900px;
+
+}
+
+
+form input {
+    margin-bottom: 10px;
+}
+
+table {
+    margin: 0 auto;          
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid rgb(255, 99, 99); 
+    padding: 8px 15px;      
+    text-align: center;      
+}
+
+button {
+    background-color: #c5ffc3;
+   
+}
